@@ -4,15 +4,18 @@
 <head>
     <title>Document</title>
     <script>
+        alert("Please enter your baggage weight")
         let doIt = () => {
             let inputText = document.getElementById("userInput").value;
-            alert(inputText);
+            if(inputText > 15){
+                alert("Your baggage weight is greater than 15kg which is "+ inputText);
+            }
         }
     </script>
 </head>
 
 <body>
-    <input type="text" id="userInput">
+    <label for="userInput">Baggage weight</label> <input type="text" id="userInput"> </br>
     <button onclick="doIt();">Press Me!</button>
 </body>
 
