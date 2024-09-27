@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
-    <script src="euler.js"></script>
+    <script src="euler.js">
+
+        let doCal = () => {
+            let a = document.getElementById("userInputA").value;
+            let b = document.getElementById("userInputB").value;
+            let n = document.getElementById("userInputSum").value;
+
+            let result = doCalcForAss1(a, b, n);
+            alert(result);
+        }
+
+
+    </script>
 </head>
+
 <body>
     <label for="userInput">A </label> <input type="text" id="userInputA">
     <label for="userInput">B</label> <input type="text" id="userInputB">
@@ -11,4 +25,5 @@
 
     <button onclick="doCal();">Press Me!</button>
 </body>
+
 </html>
