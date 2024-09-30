@@ -5,14 +5,21 @@
     <title>Document</title>
     <script src="euler.js"></script>
     <script>
-
+        document.getElementById("result-sec").style.display = "none";
         doCal = () => {
             let a = document.getElementById("userInputA").value;
             let b = document.getElementById("userInputB").value;
             let n = document.getElementById("userInputSum").value;
 
             let result = doCalcForAss1(a, b, n);
-            alert(result);
+            console.log(result);
+
+            document.getElementById("a-val").innerHTML = a;
+            document.getElementById("b-val").innerHTML = b;
+            document.getElementById("n-val").innerHTML = n;
+            document.getElementById("result-val").innerHTML = result;
+
+            document.getElementById("result-sec").style.display = "block";
         }
     </script>
 </head>
@@ -23,6 +30,11 @@
     <label for="userInput">Maximum length</label> <input type="text" id="userInputSum">
 
     <button onclick="doCal();">Press Me!</button>
+
+    <section id="result-sec">
+        <h2>The sum of mulitple of <span id="a-val"></span> or <span id="b-val"></span> and below <span
+                id="limit-val"></span> is <span id="result-val"></span></h2>
+    </section>
 </body>
 
 </html>
