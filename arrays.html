@@ -13,7 +13,7 @@
         let l = [3, 5, 6, 12, 10, 15, 20, 14, 11];
         let probA = (a, b, l) => {
             let sum = 0;
-            for (let i = 0; i <= l.length; i++) {
+            for (let i = 0; i < l.length; i++) {
                 let val = l[i];
                 if (i % a == 0 || i % b == 0) {
                     sum = sum + val;
@@ -32,7 +32,7 @@
         // find the sum of all the multiples of a in l
         let probB = (a, l) => {
             let sum = 0;
-            for (let i = 0; i <= l.length; i++) {
+            for (let i = 0; i < l.length; i++) {
                 let val = l[i];
                 if (i % a[0] == 0 || i % a[1] == 0) {
                     sum = sum + val;
@@ -50,7 +50,7 @@
         a = [3, 5, 2, 7]; l = [3, 5, 6, 12, 10, 15, 20, 14, 11];
         let probC = (a, l) => {
             let sum = 0;
-            for (let i = 0; i <= l.length; i++) {
+            for (let i = 0; i < l.length; i++) {
                 let val = l[i];
                 for (let j = 0; j <= a.length; a++) {
                     if (i % a[j] == 0) {
