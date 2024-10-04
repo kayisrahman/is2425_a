@@ -52,9 +52,10 @@
             let sum = 0;
             for (let i = 0; i < l.length; i++) {
                 let val = l[i];
-                for (let j = 0; j <= a.length; a++) {
+                for (let j = 0; j <= a.length; j++) {
                     if (val % a[j] == 0) {
                         sum = sum + val;
+                        return;
                     }
                 }
             }
