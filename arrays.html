@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrays</title>
+    <script>
+        // Arrays:
+        // a.
+        // Create a function which takes parameters a,b,l
+        // l is a list of integers
+        // find the sum of all the multiples of a or b in l
+        let a = 3, b = 5;
+        let l = [3, 5, 6, 12, 10, 15, 20, 14, 11];
+        let probA = (a, b, l) => {
+            let sum = 0;
+            for (let i = 0; i <= l.length; i++) {
+                let val = l[i];
+                if (i % a == 0 || i % b == 0) {
+                    sum = sum + val;
+                }
+            }
+            return sum;
+        }
+
+        console.log("First problem A result =" + probA(a, b, l));
+
+        a = [3, 5]; l = [3, 5, 6, 12, 10, 15, 20, 14, 11];
+        // b.
+        // Create a function which takes parameters a,l
+        // a is a list of two integers
+        // l is a list of integers
+        // find the sum of all the multiples of a in l
+        let probB = (a, l) => {
+            let sum = 0;
+            for (let i = 0; i <= l.length; i++) {
+                let val = l[i];
+                if (i % a[0] == 0 || i % a[1] == 0) {
+                    sum = sum + val;
+                }
+            }
+            return sum;
+        }
+
+        console.log("First problem B result =" + probB(a, l));
+        // c.
+        // Create a function which takes parameters a,l
+        // a is a list of integers
+        // l is a list of integers
+        // find the sum of all the multiples of a in l
+        a = [3, 5, 2, 7]; l = [3, 5, 6, 12, 10, 15, 20, 14, 11];
+        let probC = (a, l) => {
+            let sum = 0;
+            for (let i = 0; i <= l.length; i++) {
+                let val = l[i];
+                for (let j = 0; j <= a.length; a++) {
+                    if (i % a[j] == 0) {
+                        sum = sum + val;
+                    }
+                }
+            }
+            return sum;
+        }
+
+        console.log("First problem C result =" + probB(a, l));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
