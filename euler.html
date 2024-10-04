@@ -5,7 +5,7 @@
     <title>Document</title>
     <script src="euler.js"></script>
     <script>
-        document.getElementById("result-sec").style.display = "none";
+        document.getElementById("result-sec").style.visibility = "false";
         doCal = () => {
             let a = document.getElementById("userInputA").value;
             let b = document.getElementById("userInputB").value;
@@ -19,7 +19,7 @@
             document.getElementById("n-val").innerHTML = n;
             document.getElementById("result-val").innerHTML = result;
 
-            document.getElementById("result-sec").style.display = "block";
+            document.getElementById("result-sec").style.visibility = "true";
         }
     </script>
 </head>
