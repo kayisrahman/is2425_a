@@ -20,7 +20,7 @@ let prices = {
 };
 let basketCost = (b, p) => {
     console.log(b, p);
-    return b["price" + b.product] * p.price;
+    return p["price" + b.product] * b.qty;
 }
 
 alert(basketCost(basket, prices));
