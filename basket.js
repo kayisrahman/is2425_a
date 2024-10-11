@@ -8,21 +8,25 @@ and prices is a mapping from products(String) to prices (number)
 and returns the total cost of the basket
 */
 let basket = {
-    "product": "Eggs",
-    "qty": 2
+    "Eggs": 2,
+    "Milk": 4,
+    "Ball": 1
 }
 
 let prices = {
-    "priceBall": 4.99,
-    "priceMilk": 1.05,
-    "priceEggs": 3.50,
+    "Ball": 4.99,
+    "Milk": 1.05,
+    "Eggs": 3.50,
 };
 let basketCost = (b, p) => {
     console.log(b, p);
-    if (p["price" + b.product]) {
-        return p["price" + b.product] * b.qty;
+    let sum = 0;
+    for (const [key, value] of Object.entries(b)) {
+        if (p[key]) {
+            sum += value * p[key];
+        }
     }
-    return 0;
+    return sum;
 }
 
 alert(basketCost(basket, prices));
