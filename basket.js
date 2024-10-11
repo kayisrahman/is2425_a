@@ -21,4 +21,4 @@ let basketCost = (b, p) => {
     return b.qty * p.price;
 }
 
-alert(basketCost({}, {}))
+alert(basketCost(basket, product));
