@@ -8,17 +8,19 @@ and prices is a mapping from products(String) to prices (number)
 and returns the total cost of the basket
 */
 let basket = {
-    "name": "Ball",
+    "product": "Ball",
     "qty": 2
 }
 
-let product = {
-    "name": "Ball",
-    "price": 4.99
+let prices = {
+    "priceBall": 4.99,
+    "priceMilk": 1.05,
+    "priceEggs": 3.50,
+    "priceEggs": 3.50,
 };
 let basketCost = (b, p) => {
     console.log(b, p);
-    return b.qty * p.price;
+    return b["price" + p.product] * p.price;
 }
 
-alert(basketCost(basket, product));
+alert(basketCost(basket, prices));
