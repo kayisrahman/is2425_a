@@ -16,12 +16,15 @@ let prices = { // product to price
     "Milk": 1.05,
     "Eggs": 3.50,
 };
-
+let total = 0;
 let addItem = () => {
     let product = document.getElementById("selProduct").value;
     let qty = document.getElementById("txtQty").value;
     basket[product] = qty;
-    document.querySelector("#tblShowGrid tbody").insertAdjacentHTML('beforeend', `<tr><td>${product}</td><td>${qty}</td><td>${prices[product] * qty}</td></tr>`);
+    let itemTotal = prices[product] * qty
+    document.querySelector("#tblShowGrid tbody").insertAdjacentHTML('beforeend', `<tr><td>${product}</td><td>${qty}</td><td>${itemTotal}</td></tr>`);
+    total += itemTotal;
+    document.getElementById("lblTotal").innerHTML = total;
 }
 
 let basketCost = (b, p) => {
