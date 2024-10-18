@@ -5,6 +5,46 @@
     <script src="basket.js"></script>
 </head>
 <body>
-    
+    <table> 
+        <tbody>
+            <tr>
+                <td><label for="selProduct">Select Product</label></td>
+                <td>
+                    <Select id="selProduct">
+                        <option value="Eggs">Eggs</option>
+                        <option value="Eggs">Milk</option>
+                        <option value="Eggs">Bread</option>
+                        <option value="Eggs">Coffee</option>
+                        <option value="Eggs">Tea</option>
+                    </Select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="txtQty">Enter the Quantity</label></td>
+                <td><input id="txtQty" type="number" min="1" step="1"></td>
+            </tr>
+            <tr>
+                <td><input onclick="addItem();"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="tblShowGrid"> 
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+        <tfoot>
+           <tr>
+            <td colspan="2">Total</td>
+            <td>0.00</td>
+           </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
