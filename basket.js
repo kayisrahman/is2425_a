@@ -21,8 +21,7 @@ let addItem = () => {
     let product = document.getElementById("selProduct").value;
     let qty = document.getElementById("txtQty").value;
     basket[product] = qty;
-    document.createElement(`<tr><td>${product}</td><td>${qty}</td><td>${prices[product] * qty}</td></tr>`);
-    document.querySelector("#tblShowGrid tbody").insertAdjacentHTML('beforeend', '<li>third</li>');
+    document.querySelector("#tblShowGrid tbody").insertAdjacentHTML('beforeend', `<tr><td>${product}</td><td>${qty}</td><td>${prices[product] * qty}</td></tr>`);
 }
 
 let basketCost = (b, p) => {
