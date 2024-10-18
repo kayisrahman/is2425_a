@@ -1,5 +1,3 @@
-alert("Loaded Basket JS");
-
 /*
 Create a function that takes two objects,
 basket and prices as parameters
